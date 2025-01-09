@@ -1,26 +1,31 @@
-import { Check, Rocket } from "lucide-react";
+import { Rocket, Users, Zap, Search, LineChart, FileText } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 const features = [
   {
     title: "Dedicated Engineer",
     description: "Get personalized attention from your dedicated engineering team who will build 5-15 mini applications tailored to your specific needs. Each app is crafted with your business goals in mind.",
+    icon: Users,
   },
   {
     title: "Rapid Delivery",
     description: "Experience lightning-fast development with your first app delivered within 7 days, second app in just 2 days, and continuous delivery of up to 15 apps monthly. Our streamlined process ensures quick turnaround without compromising quality.",
+    icon: Zap,
   },
   {
     title: "SEO Research",
     description: "Benefit from comprehensive competitor analysis and strategic app recommendations designed to maximize your market impact. We identify key opportunities and gaps in your niche to ensure your applications stand out.",
+    icon: Search,
   },
   {
     title: "Optimization",
     description: "Receive three rounds of detailed conversion optimization work to fine-tune your applications. We analyze user behavior, implement improvements, and optimize for maximum engagement and conversion rates.",
+    icon: LineChart,
   },
   {
     title: "SEO Content",
     description: "Get high-quality, SEO-optimized content that combines AI efficiency with human expertise. Our content strategy ensures better search engine rankings while maintaining natural, engaging writing that resonates with your audience.",
+    icon: FileText,
   },
 ];
 
@@ -41,7 +46,7 @@ export const Features = () => {
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <div className="mt-1 bg-primary/10 p-2 rounded-full">
-                      <Check className="h-5 w-5 text-primary" />
+                      <feature.icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>
