@@ -5,7 +5,7 @@ export const Hero = () => {
     <div className="min-h-[80vh] flex items-center justify-center section-padding">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1 text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">
             Your Dedicated <span className="gradient-text">AI-Powered</span> Engineering Team
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
