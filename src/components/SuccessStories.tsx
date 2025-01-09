@@ -60,10 +60,17 @@ export const SuccessStories = () => {
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {stories.map((story) => (
-            <Card key={story.id} className="flex flex-col">
+            <Card 
+              key={story.id} 
+              className={`flex flex-col ${
+                story.id === 4 
+                  ? "bg-gradient-to-br from-purple-50 via-white to-purple-50 border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" 
+                  : ""
+              }`}
+            >
               <div className="flex flex-col flex-1">
                 <CardHeader>
-                  <CardTitle className="text-xl">
+                  <CardTitle className={`text-xl ${story.id === 4 ? "text-purple-800" : ""}`}>
                     {story.title}
                     <div className="flex gap-4 mt-3 text-sm">
                       {story.id === 1 && (
@@ -105,12 +112,12 @@ export const SuccessStories = () => {
                       {story.id === 4 && (
                         <>
                           <div>
-                            <span className="text-2xl font-bold text-primary block">100%</span>
-                            <span className="text-muted-foreground text-sm">Success</span>
+                            <span className="text-2xl font-bold text-purple-600 block">100%</span>
+                            <span className="text-purple-600/80 text-sm">Success</span>
                           </div>
                           <div>
-                            <span className="text-2xl font-bold text-primary block">24/7</span>
-                            <span className="text-muted-foreground text-sm">Support</span>
+                            <span className="text-2xl font-bold text-purple-600 block">24/7</span>
+                            <span className="text-purple-600/80 text-sm">Support</span>
                           </div>
                         </>
                       )}
@@ -118,18 +125,29 @@ export const SuccessStories = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <p className="text-muted-foreground mb-6">{story.description}</p>
+                  <p className={`mb-6 ${story.id === 4 ? "text-purple-700" : "text-muted-foreground"}`}>
+                    {story.description}
+                  </p>
                   <ul className="space-y-2">
                     {story.metrics.map((metric, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <span className="text-primary font-medium">•</span>
-                        <span>{metric}</span>
+                        <span className={story.id === 4 ? "text-purple-500" : "text-primary"}>•</span>
+                        <span className={story.id === 4 ? "text-purple-700" : ""}>
+                          {metric}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="w-full group">
+                  <Button 
+                    variant={story.id === 4 ? "default" : "outline"} 
+                    className={`w-full group ${
+                      story.id === 4 
+                        ? "bg-purple-600 hover:bg-purple-700 text-white" 
+                        : ""
+                    }`}
+                  >
                     {story.id === 4 ? "Book a Call" : "View Tool"}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
