@@ -40,8 +40,8 @@ const additionalFeatures = [
     icon: LineChart
   },
   {
-    title: "AI-Assisted SEO Content",
-    description: "Each app comes with human-written, AI-assisted SEO content to further strengthen your mini app's performance.",
+    title: "Human Written SEO Content",
+    description: "Each app comes with carefully crafted, human-written SEO content to further strengthen your mini app's performance.",
     icon: FileText
   },
   {
