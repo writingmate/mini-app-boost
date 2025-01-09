@@ -56,7 +56,7 @@ export const SuccessStories = () => {
                 <img 
                   src={story.image} 
                   alt={story.title}
-                  className="object-cover w-full h-full p-4"
+                  className="object-cover w-full h-full p-4 max-w-[240px] mx-auto rounded-lg"
                 />
               </div>
               <div className={`flex flex-col flex-1 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
