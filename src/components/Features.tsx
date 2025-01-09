@@ -52,13 +52,6 @@ export const Features = () => {
                   <div className="relative">
                     <div className="absolute left-4 top-14 bottom-0 w-0.5 bg-primary/20" 
                          style={{ display: index === features.length - 1 ? 'none' : 'block' }} />
-                    <Card className="relative z-10 border-primary/20">
-                      <CardContent className="p-2">
-                        <div className="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center">
-                          <feature.icon className="h-5 w-5 text-primary" />
-                        </div>
-                      </CardContent>
-                    </Card>
                   </div>
                   <Card className="flex-1 border-primary/20">
                     <CardContent className="pt-6">
