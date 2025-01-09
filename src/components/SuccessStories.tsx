@@ -12,7 +12,8 @@ const stories = [
       "32,000 visitors in two months after release",
       "10,000+ visitors converted to users"
     ],
-    link: "#"
+    link: "#",
+    image: "https://framerusercontent.com/images/Okx48o4rpiyqTDpnoD6E1tcBpM.png?scale-down-to=512&lossless=1"
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ const stories = [
       "In Google's top-3 with 1000+ keywords",
       "More than 2 million unique visits so far"
     ],
-    link: "#"
+    link: "#",
+    image: "https://framerusercontent.com/images/W361sbqOshdIPX5WUotjLLTrSM.png?scale-down-to=512&lossless=1"
   },
   {
     id: 3,
@@ -35,7 +37,8 @@ const stories = [
       "Google's top-3 for target keyword in 4 days",
       "In Google's top-3 for 15 keywords now"
     ],
-    link: "#"
+    link: "#",
+    image: "https://framerusercontent.com/images/nYgGvQCT99vUl28tZooU4mqM.png?scale-down-to=512&lossless=1"
   }
 ];
 
@@ -49,6 +52,13 @@ export const SuccessStories = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stories.map((story) => (
             <Card key={story.id} className="flex flex-col">
+              <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+                <img 
+                  src={story.image} 
+                  alt={story.title}
+                  className="object-cover w-full h-full"
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="text-xl">{story.title}</CardTitle>
               </CardHeader>
