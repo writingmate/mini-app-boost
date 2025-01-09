@@ -8,7 +8,7 @@ const features = [
   },
   {
     title: "Rapid Delivery",
-    description: "First app within 7 days, second app 2 days after",
+    description: "First app within 7 days, second in 2 days, up to 15 apps monthly",
   },
   {
     title: "SEO Research",
