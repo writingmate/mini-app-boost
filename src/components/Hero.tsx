@@ -4,14 +4,11 @@ export const Hero = () => {
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center section-padding">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
-          Hire Dedicated <span className="gradient-text">AI-Powered</span> SEO Engineering Team
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12">
+          Want the same <span className="gradient-text">SEO growth</span>?
         </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-12 gradient-text">
-          Want the same SEO growth?
-        </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-8">
-          Build SEO-optimized web mini apps without coding. Get your first app within 7 days.
+          We build SEO-optimized web mini apps. Get your first app within 7 days.
         </p>
         <img 
           src="https://framerusercontent.com/images/4UbBrsXAbl3VywkQuCYTzUZC88.png?scale-down-to=1024&lossless=1"
