@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+import { BookingDialog } from "./BookingDialog";
 
 export const Hero = () => {
   return (
@@ -16,9 +16,12 @@ export const Hero = () => {
           We build SEO-optimized web mini apps. Get your first app <span className="gradient-text font-semibold">within 7 days</span>.
         </p>
         <div className="flex flex-col items-center gap-3">
-          <Button size="lg" className="text-xl px-12 py-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200">
+          <BookingDialog 
+            size="lg" 
+            className="text-xl px-12 py-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200"
+          >
             Book a Call
-          </Button>
+          </BookingDialog>
           <p className="text-muted-foreground">
             <span className="animate-pulse text-primary font-semibold">2</span> out of 3 slots left January 2025
           </p>

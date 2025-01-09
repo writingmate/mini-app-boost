@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+import { BookingDialog } from "./BookingDialog";
 
 export const CallToAction = () => {
   return (
@@ -10,9 +10,12 @@ export const CallToAction = () => {
         <p className="text-lg text-muted-foreground mb-8">
           Schedule a no-obligation consultation to discuss your goals and see if our mini apps strategy aligns with your business needs. No pressure, no charge – just a straightforward conversation about your growth potential.
         </p>
-        <Button size="lg" className="text-xl px-12 py-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200">
+        <BookingDialog 
+          size="lg" 
+          className="text-xl px-12 py-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200"
+        >
           Book Your Free Consultation
-        </Button>
+        </BookingDialog>
       </div>
     </div>
   );
