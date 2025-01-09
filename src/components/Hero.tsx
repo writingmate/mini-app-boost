@@ -15,12 +15,9 @@ export const Hero = () => {
         <p className="text-lg md:text-xl text-muted-foreground mb-12">
           We build SEO-optimized web mini apps. Get your first app <span className="gradient-text font-semibold">within 7 days</span>.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg">
-            Book a Demo
-          </Button>
-          <Button size="lg" variant="outline" className="text-lg">
-            View Examples
+        <div className="flex justify-center">
+          <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200">
+            Book a Call
           </Button>
         </div>
       </div>

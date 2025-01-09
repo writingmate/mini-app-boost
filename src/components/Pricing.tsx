@@ -35,8 +35,8 @@ export const Pricing = () => {
             </ul>
           </CardContent>
           <CardFooter>
-            <Button size="lg" className="w-full text-lg">
-              Book a Demo
+            <Button size="lg" className="w-full text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-200">
+              Book a Call
             </Button>
           </CardFooter>
         </Card>
