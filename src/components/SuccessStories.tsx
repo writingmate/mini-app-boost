@@ -49,36 +49,38 @@ export const SuccessStories = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Success <span className="gradient-text">Stories</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {stories.map((story) => (
-            <Card key={story.id} className="flex flex-col">
-              <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+        <div className="space-y-8">
+          {stories.map((story, index) => (
+            <Card key={story.id} className="flex flex-col md:flex-row overflow-hidden">
+              <div className={`relative w-full md:w-1/2 h-64 md:h-auto ${index % 2 === 1 ? 'md:order-2' : ''}`}>
                 <img 
                   src={story.image} 
                   alt={story.title}
                   className="object-cover w-full h-full"
                 />
               </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{story.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground mb-6">{story.description}</p>
-                <ul className="space-y-2">
-                  {story.metrics.map((metric, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="text-primary font-medium">•</span>
-                      <span>{metric}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button variant="outline" className="w-full group">
-                  View Tool
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </CardFooter>
+              <div className={`flex flex-col flex-1 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                <CardHeader>
+                  <CardTitle className="text-xl">{story.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <p className="text-muted-foreground mb-6">{story.description}</p>
+                  <ul className="space-y-2">
+                    {story.metrics.map((metric, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <span className="text-primary font-medium">•</span>
+                        <span>{metric}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button variant="outline" className="w-full group">
+                    View Tool
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </CardFooter>
+              </div>
             </Card>
           ))}
         </div>
