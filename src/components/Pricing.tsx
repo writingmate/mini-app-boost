@@ -25,7 +25,6 @@ export const Pricing = () => {
         </p>
         <Card className="max-w-lg mx-auto border">
           <CardHeader>
-            <h3 className="text-2xl font-bold">Agency Plan</h3>
             <p className="text-4xl font-bold mt-4">$5,000<span className="text-lg text-muted-foreground">/month</span></p>
           </CardHeader>
           <CardContent>
