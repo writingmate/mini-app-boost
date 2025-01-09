@@ -13,7 +13,7 @@ export const Hero = () => {
           className="w-full max-w-[600px] mx-auto mb-8"
         />
         <p className="text-lg md:text-xl text-muted-foreground mb-12">
-          We build SEO-optimized web mini apps. Get your first app within 7 days.
+          We build SEO-optimized web mini apps that drive traffic better than traditional content marketing.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="text-lg">
