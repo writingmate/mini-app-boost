@@ -14,6 +14,10 @@ const faqItems = [
     answer: "Our account management team in North America, California. They'll handle your SEO strategy, content needs and answer any questions you may have. The executing team is in Europe: Warsaw and Amsterdam"
   },
   {
+    question: "Why do mini apps actually work?",
+    answer: "Google favors webpages with higher engagement and user interactions like clicks, form fill ups, etc above static content. This is why interactive mini apps drive more traffic. Also users love sharing mini apps with other people, which creates viral loops if you are lucky."
+  },
+  {
     question: "I can't come up with app ideas. Will you help us?",
     answer: "Yes, we will help you research the market and come up with app ideas, you only get to choose which one to build, and we will build it for you"
   },
