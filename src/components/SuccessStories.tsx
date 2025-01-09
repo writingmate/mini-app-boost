@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { BookingDialog } from "./BookingDialog";
 
 const stories = [
   {
@@ -138,13 +139,24 @@ export const SuccessStories = () => {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <Button 
-                    variant={story.id === 4 ? "default" : "outline"} 
-                    className="w-full group"
-                  >
-                    {story.id === 4 ? "Book a Call" : "View Tool"}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  {story.id === 4 ? (
+                    <BookingDialog variant="default" className="w-full group">
+                      Book a Call
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </BookingDialog>
+                  ) : (
+                    <a 
+                      href={story.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="w-full"
+                    >
+                      <Button variant="outline" className="w-full group">
+                        View Tool
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </a>
+                  )}
                 </CardFooter>
               </div>
             </Card>
