@@ -62,8 +62,7 @@ export const Features = () => {
     <div className="w-full bg-slate-50">
       <div className="section-padding">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-12">
-            <Rocket className="w-8 h-8 text-primary" />
+          <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-center">
               Step by Step Plan to <span className="gradient-text">Scale Your SEO with Mini Apps</span>
             </h2>
