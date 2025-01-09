@@ -34,7 +34,7 @@ export const TeamSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <Card key={member.name} className="border-none">
               <CardContent className="pt-6">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                   <img
