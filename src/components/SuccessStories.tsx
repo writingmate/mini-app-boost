@@ -130,7 +130,7 @@ export const SuccessStories = () => {
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" className="w-full group">
-                    {story.id === 4 ? "Start Your Story" : "View Tool"}
+                    {story.id === 4 ? "Book a Call" : "View Tool"}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardFooter>
