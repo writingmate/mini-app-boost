@@ -8,7 +8,7 @@ export const Hero = () => {
           <h1 className="text-2xl md:text-4xl font-bold mb-6">
             Your Dedicated <span className="gradient-text">AI-Powered</span> Engineering Team
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Build SEO-optimized web mini apps without coding. Get your first app within 7 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
