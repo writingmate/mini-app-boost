@@ -43,31 +43,55 @@ export const SuccessStories = () => {
   return (
     <div className="section-padding bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Success <span className="gradient-text">Stories</span>
-          </h2>
-          <div className="flex justify-center gap-8 text-center">
-            <div>
-              <span className="text-4xl font-bold text-primary block">2M+</span>
-              <span className="text-muted-foreground">Total Visits</span>
-            </div>
-            <div>
-              <span className="text-4xl font-bold text-primary block">70K+</span>
-              <span className="text-muted-foreground">Monthly Users</span>
-            </div>
-            <div>
-              <span className="text-4xl font-bold text-primary block">15+</span>
-              <span className="text-muted-foreground">Top Keywords</span>
-            </div>
-          </div>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          Success <span className="gradient-text">Stories</span>
+        </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {stories.map((story) => (
             <Card key={story.id} className="flex flex-col">
               <div className="flex flex-col flex-1">
                 <CardHeader>
-                  <CardTitle className="text-xl">{story.title}</CardTitle>
+                  <CardTitle className="text-xl">
+                    {story.title}
+                    <div className="flex gap-4 mt-3 text-sm">
+                      {story.id === 1 && (
+                        <>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">32K+</span>
+                            <span className="text-muted-foreground text-sm">Visitors</span>
+                          </div>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">10K+</span>
+                            <span className="text-muted-foreground text-sm">Users</span>
+                          </div>
+                        </>
+                      )}
+                      {story.id === 2 && (
+                        <>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">70K+</span>
+                            <span className="text-muted-foreground text-sm">Monthly</span>
+                          </div>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">2M+</span>
+                            <span className="text-muted-foreground text-sm">Total</span>
+                          </div>
+                        </>
+                      )}
+                      {story.id === 3 && (
+                        <>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">15+</span>
+                            <span className="text-muted-foreground text-sm">Keywords</span>
+                          </div>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">#3</span>
+                            <span className="text-muted-foreground text-sm">Ranking</span>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <p className="text-muted-foreground mb-6">{story.description}</p>
