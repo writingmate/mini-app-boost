@@ -36,6 +36,18 @@ const stories = [
       "In Google's top-3 for 15 keywords now"
     ],
     link: "#"
+  },
+  {
+    id: 4,
+    title: "Your Success Story",
+    description: "Ready to turn your idea into the next success story? Let us help you build and launch your web application with our proven expertise and development process.",
+    metrics: [
+      "Fast development and deployment",
+      "SEO-optimized from day one",
+      "Scalable architecture",
+      "Continuous support and maintenance"
+    ],
+    link: "#"
   }
 ];
 
@@ -90,6 +102,18 @@ export const SuccessStories = () => {
                           </div>
                         </>
                       )}
+                      {story.id === 4 && (
+                        <>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">100%</span>
+                            <span className="text-muted-foreground text-sm">Success</span>
+                          </div>
+                          <div>
+                            <span className="text-2xl font-bold text-primary block">24/7</span>
+                            <span className="text-muted-foreground text-sm">Support</span>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </CardTitle>
                 </CardHeader>
@@ -106,7 +130,7 @@ export const SuccessStories = () => {
                 </CardContent>
                 <CardFooter>
                   <Button variant="outline" className="w-full group">
-                    View Tool
+                    {story.id === 4 ? "Start Your Story" : "View Tool"}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardFooter>
