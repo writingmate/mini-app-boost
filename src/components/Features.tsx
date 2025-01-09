@@ -1,4 +1,4 @@
-import { Rocket, Users, Zap, Search, LineChart, FileText, Target, Tool, Upload, Share, Library } from "lucide-react";
+import { Rocket, Users, Zap, Search, LineChart, FileText, Target, Wrench, Upload, Share, Library } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 const features = [
@@ -38,7 +38,7 @@ const steps = [
   {
     title: "Build the Tool",
     description: "Use ToolzFlow to quickly create a simple, keyword-targeted application",
-    icon: Tool,
+    icon: Wrench,
   },
   {
     title: "Deploy",
