@@ -4,8 +4,8 @@ import { BookingDialog } from "./BookingDialog";
 export const Header = () => {
   return (
     <header className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="font-bold text-xl">
+      <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+        <div className="font-bold text-lg">
           <span className="gradient-text">ToolzFlow</span>
           <span className="ml-1 text-muted-foreground">Agency</span>
         </div>
@@ -21,7 +21,7 @@ export const Header = () => {
             Team
           </a>
           <BookingDialog 
-            size="sm"
+            size="default"
             className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
           >
             Book a Call
