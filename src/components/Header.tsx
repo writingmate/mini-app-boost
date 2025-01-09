@@ -5,7 +5,8 @@ export const Header = () => {
     <header className="border-b sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="font-bold text-xl">
-          ToolzFlow
+          <span className="gradient-text">ToolzFlow</span>
+          <span className="ml-1 text-muted-foreground">Agency</span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
