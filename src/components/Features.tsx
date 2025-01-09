@@ -54,8 +54,8 @@ export const Features = () => {
                          style={{ display: index === features.length - 1 ? 'none' : 'block' }} />
                     <Card className="relative z-10 border-primary/20">
                       <CardContent className="p-2">
-                        <div className="bg-primary text-primary-foreground w-8 h-8 rounded-full flex items-center justify-center font-semibold">
-                          {feature.step}
+                        <div className="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center">
+                          <feature.icon className="h-5 w-5 text-primary" />
                         </div>
                       </CardContent>
                     </Card>
