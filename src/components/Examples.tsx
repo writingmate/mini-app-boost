@@ -46,7 +46,7 @@ export const Examples = () => {
           <CarouselContent>
             {examples.map((example, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <Card className="h-full">
+                <Card className="h-full border">
                   <CardHeader>
                     <CardTitle>{example.title}</CardTitle>
                     <CardDescription>{example.description}</CardDescription>

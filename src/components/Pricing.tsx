@@ -19,7 +19,7 @@ export const Pricing = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-12">
           Simple, Transparent <span className="gradient-text">Pricing</span>
         </h2>
-        <Card className="max-w-lg mx-auto border-2">
+        <Card className="max-w-lg mx-auto border">
           <CardHeader>
             <h3 className="text-2xl font-bold">Agency Plan</h3>
             <p className="text-4xl font-bold mt-4">$5,000<span className="text-lg text-muted-foreground">/month</span></p>

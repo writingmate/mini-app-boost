@@ -36,7 +36,7 @@ export const Testimonials = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="border-2">
+            <Card key={testimonial.id} className="border">
               <CardContent className="pt-6">
                 <blockquote className="twitter-tweet">
                   <a href={testimonial.url}>Loading tweet...</a>

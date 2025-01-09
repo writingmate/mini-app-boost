@@ -33,7 +33,7 @@ export const Features = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (
-            <Card key={feature.title} className="border-2">
+            <Card key={feature.title} className="border">
               <CardContent className="pt-6">
                 <div className="flex items-start gap-4">
                   <div className="mt-1 bg-primary/10 p-2 rounded-full">
