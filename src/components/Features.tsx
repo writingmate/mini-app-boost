@@ -1,4 +1,4 @@
-import { Rocket, Users, Phone, Search, LineChart, Zap } from "lucide-react";
+import { Rocket, Users, Phone, Search, LineChart, Zap, FileText, Brain, Database } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 const features = [
@@ -34,6 +34,24 @@ const features = [
   }
 ];
 
+const additionalFeatures = [
+  {
+    title: "AI-Assisted SEO Content",
+    description: "Each app comes with human-written, AI-assisted SEO content to further strengthen your mini app's performance.",
+    icon: FileText
+  },
+  {
+    title: "Continuous Optimization",
+    description: "We track how users interact with your apps and make improvements to increase sign-ups and other important actions.",
+    icon: LineChart
+  },
+  {
+    title: "Complete SEO Research Access",
+    description: "Get access to our complete research, which may contain additional insights and ideas about your future apps.",
+    icon: Database
+  }
+];
+
 export const Features = () => {
   return (
     <div className="w-full bg-slate-50">
@@ -45,7 +63,8 @@ export const Features = () => {
               Step by Step Plan to <span className="gradient-text">Scale Your SEO with Mini Apps</span>
             </h2>
           </div>
-          <div className="relative">
+          
+          <div className="relative mb-16">
             {features.map((feature, index) => (
               <div key={feature.title} className="relative">
                 <div className="flex items-start gap-4 mb-8">
@@ -69,6 +88,29 @@ export const Features = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+              But This Is Not All
+            </h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              {additionalFeatures.map((feature) => (
+                <Card key={feature.title} className="border-primary/20">
+                  <CardContent className="pt-6">
+                    <div className="flex flex-col items-center text-center gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <feature.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>
+                        <p className="text-muted-foreground">{feature.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
