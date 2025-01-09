@@ -4,49 +4,51 @@ import { Card, CardContent } from "./ui/card";
 const features = [
   {
     title: "Dedicated Engineer",
-    description: "Get 5-15 mini apps built by your personal engineering team",
+    description: "Get personalized attention from your dedicated engineering team who will build 5-15 mini applications tailored to your specific needs. Each app is crafted with your business goals in mind.",
   },
   {
     title: "Rapid Delivery",
-    description: "First app within 7 days, second in 2 days, up to 15 apps monthly",
+    description: "Experience lightning-fast development with your first app delivered within 7 days, second app in just 2 days, and continuous delivery of up to 15 apps monthly. Our streamlined process ensures quick turnaround without compromising quality.",
   },
   {
     title: "SEO Research",
-    description: "Competitor research and app recommendations for maximum impact",
+    description: "Benefit from comprehensive competitor analysis and strategic app recommendations designed to maximize your market impact. We identify key opportunities and gaps in your niche to ensure your applications stand out.",
   },
   {
     title: "Optimization",
-    description: "3 iterations for conversion optimization work",
+    description: "Receive three rounds of detailed conversion optimization work to fine-tune your applications. We analyze user behavior, implement improvements, and optimize for maximum engagement and conversion rates.",
   },
   {
     title: "SEO Content",
-    description: "AI-facilitated, human-written content for better ranking",
+    description: "Get high-quality, SEO-optimized content that combines AI efficiency with human expertise. Our content strategy ensures better search engine rankings while maintaining natural, engaging writing that resonates with your audience.",
   },
 ];
 
 export const Features = () => {
   return (
-    <div className="section-padding bg-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Everything You Need to <span className="gradient-text">Scale Your SEO</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <Card key={feature.title} className="border">
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-4">
-                  <div className="mt-1 bg-primary/10 p-2 rounded-full">
-                    <Check className="h-5 w-5 text-primary" />
+    <div className="w-full bg-slate-50">
+      <div className="section-padding">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Everything You Need to <span className="gradient-text">Scale Your SEO</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature) => (
+              <Card key={feature.title} className="border h-full">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 bg-primary/10 p-2 rounded-full">
+                      <Check className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>
+                      <p className="text-muted-foreground">{feature.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-xl mb-2">{feature.title}</h3>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
