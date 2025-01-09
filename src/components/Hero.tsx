@@ -3,8 +3,8 @@ import { BookingDialog } from "./BookingDialog";
 export const Hero = () => {
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center section-padding">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl font-bold mb-12">
+      <div className="w-full text-center">
+        <h1 className="text-5xl font-bold mb-12 max-w-[95%] mx-auto">
           Want the same <span className="gradient-text">SEO growth</span>?
         </h1>
         <img 
@@ -12,7 +12,7 @@ export const Hero = () => {
           alt="ToolzFlow Hero"
           className="w-full max-w-[600px] mx-auto mb-8"
         />
-        <p className="text-xl text-muted-foreground mb-12">
+        <p className="text-xl text-muted-foreground mb-12 max-w-[95%] mx-auto">
           We build SEO-optimized web mini apps. Get your first app <span className="gradient-text font-semibold">within 7 days</span>.
         </p>
         <div className="flex flex-col items-center gap-3">
