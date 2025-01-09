@@ -16,9 +16,13 @@ export const Pricing = () => {
   return (
     <div className="section-padding">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Simple, Transparent <span className="gradient-text">Pricing</span>
         </h2>
+        <p className="text-muted-foreground mb-12">
+          Only <span className="text-primary font-semibold">2 slots left</span> this month out of 3 total client positions.
+          <span className="block text-sm mt-1">1 slot already booked</span>
+        </p>
         <Card className="max-w-lg mx-auto border">
           <CardHeader>
             <h3 className="text-2xl font-bold">Agency Plan</h3>
