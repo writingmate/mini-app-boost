@@ -42,13 +42,18 @@ const additionalFeatures = [
   },
   {
     title: "Continuous Optimization",
-    description: "We track how users interact with your apps and make improvements to increase sign-ups and other important actions.",
+    description: "We track how users interact with your apps and make up to 3 iterations of improvements to increase sign-ups and other important actions.",
     icon: LineChart
   },
   {
     title: "Complete SEO Research Access",
     description: "Get access to our complete research, which may contain additional insights and ideas about your future apps.",
     icon: Database
+  },
+  {
+    title: "Dedicated Engineer",
+    description: "You'll have a dedicated engineer working on your mini apps, ensuring consistent quality and quick iterations.",
+    icon: Brain
   }
 ];
 
