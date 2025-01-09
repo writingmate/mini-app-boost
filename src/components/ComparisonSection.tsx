@@ -22,11 +22,10 @@ export const ComparisonSection = () => {
               </h3>
               <ul className="space-y-4">
                 {[
-                  "Generic, template-based content",
-                  "One-time static pages",
-                  "Limited user engagement",
-                  "Basic keyword optimization",
-                  "No user interaction data"
+                  "Generic, meningless AI-based content",
+                  "AI generated content poorly on Google",
+                  "Static pages drive low engagement",
+                  "No user integration insights"
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <X className="w-5 h-5 text-destructive/70 mt-1 shrink-0" />
@@ -45,9 +44,8 @@ export const ComparisonSection = () => {
               <ul className="space-y-4">
                 {[
                   "Interactive, purpose-built tools",
-                  "Continuously evolving content",
-                  "High user engagement",
-                  "Advanced SEO optimization",
+                  "High user engagement, favorable by Google",
+                  "Human written SEO content",
                   "Rich user behavior insights"
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
