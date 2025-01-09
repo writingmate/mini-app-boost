@@ -9,7 +9,7 @@ const features = [
     step: 1
   },
   {
-    title: "Day 2: App Selection & Research",
+    title: "Day 2: Keyword Analysis & App Selection",
     description: "Our team researches your market and competitors to find the best opportunities. We then suggest the most effective mini apps for your business.",
     icon: Search,
     step: 2
