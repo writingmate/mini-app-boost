@@ -6,6 +6,14 @@ const faqItems = [
     answer: "The mini apps work eventually for everyone, but the websites with domain rating above 20 (based on ahrefs of semrush) are better positioned for success. If we don't think we can help you we will tell you during our first call. No money asked."
   },
   {
+    question: "How long until I see results?",
+    answer: "We'll be honest, it takes 3-6 months to see results from SEO if you have not done any SEO for your website. SEO is a long term game, but it builds a significant competitive advantage against your competition. If you have invested in SEO, you'll see results within weeks."
+  },
+  {
+    question: "Who will be managing my account?",
+    answer: "Our account management team in North America, California. They'll handle your SEO strategy, content needs and answer any questions you may have. The executing team is in Europe: Warsaw and Amsterdam"
+  },
+  {
     question: "I can't come up with app ideas. Will you help us?",
     answer: "Yes, we will help you research the market and come up with app ideas, you only get to choose which one to build, and we will build it for you"
   },
