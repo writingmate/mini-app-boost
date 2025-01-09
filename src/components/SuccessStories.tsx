@@ -43,11 +43,27 @@ export const SuccessStories = () => {
   return (
     <div className="section-padding bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Success <span className="gradient-text">Stories</span>
-        </h2>
-        <div className="space-y-8">
-          {stories.map((story, index) => (
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Success <span className="gradient-text">Stories</span>
+          </h2>
+          <div className="flex justify-center gap-8 text-center">
+            <div>
+              <span className="text-4xl font-bold text-primary block">2M+</span>
+              <span className="text-muted-foreground">Total Visits</span>
+            </div>
+            <div>
+              <span className="text-4xl font-bold text-primary block">70K+</span>
+              <span className="text-muted-foreground">Monthly Users</span>
+            </div>
+            <div>
+              <span className="text-4xl font-bold text-primary block">15+</span>
+              <span className="text-muted-foreground">Top Keywords</span>
+            </div>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {stories.map((story) => (
             <Card key={story.id} className="flex flex-col">
               <div className="flex flex-col flex-1">
                 <CardHeader>
