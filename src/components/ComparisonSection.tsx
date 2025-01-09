@@ -39,7 +39,7 @@ export const ComparisonSection = () => {
             <Card className="p-8 border-primary/20 bg-white/50">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
                 <Zap className="w-6 h-6 text-primary" />
-                Our Dynamic Mini-Apps
+                Your Dynamic Mini-Apps
               </h3>
               <ul className="space-y-4">
                 {[
