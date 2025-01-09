@@ -37,7 +37,7 @@ export const Timeline = () => {
           {steps.map((step, index) => (
             <div 
               key={step.title} 
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center`}
+              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-start`}
             >
               <div className="flex-1 space-y-4">
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold">
