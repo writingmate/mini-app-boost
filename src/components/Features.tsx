@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Rocket } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 const features = [
@@ -29,9 +29,12 @@ export const Features = () => {
     <div className="w-full bg-slate-50">
       <div className="section-padding">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Everything You Need to <span className="gradient-text">Scale Your SEO</span>
-          </h2>
+          <div className="flex items-center justify-center gap-3 mb-12">
+            <Rocket className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl md:text-4xl font-bold text-center">
+              Everything You Need to <span className="gradient-text">Scale Your SEO</span>
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
               <Card key={feature.title} className="border h-full">
