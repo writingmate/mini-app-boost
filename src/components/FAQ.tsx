@@ -36,6 +36,10 @@ const faqItems = [
   {
     question: "How do you integrate apps into my website?",
     answer: "There are three options: iframes, subsdomain or sybpath. You choose which one you prefer."
+  },
+  {
+    question: "Will I have access to the code of mini apps?",
+    answer: "Yes, you will have full access to the mini apps, including it's code."
   }
 ];
 
