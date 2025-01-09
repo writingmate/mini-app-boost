@@ -1,8 +1,9 @@
 import { Button } from "./ui/button";
+import { BookingDialog } from "./BookingDialog";
 
 export const Header = () => {
   return (
-    <header className="border-b sticky top-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="font-bold text-xl">
           <span className="gradient-text">ToolzFlow</span>
@@ -19,9 +20,12 @@ export const Header = () => {
           <a href="#team" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             Team
           </a>
-          <Button variant="default" size="sm">
+          <BookingDialog 
+            size="sm"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+          >
             Book a Call
-          </Button>
+          </BookingDialog>
         </nav>
 
         <Button variant="ghost" size="sm" className="md:hidden">
