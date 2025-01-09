@@ -21,12 +21,6 @@ const features = [
     step: 7
   },
   {
-    title: "Day 9: Optimization",
-    description: "We track how users interact with your apps and make improvements to increase sign-ups and other important actions.",
-    icon: LineChart,
-    step: 9
-  },
-  {
     title: "Day 10: Scale Up",
     description: "Using what we've learned, we quickly create more apps to bring even more visitors to your business.",
     icon: Users,
