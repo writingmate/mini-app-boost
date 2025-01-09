@@ -56,7 +56,7 @@ export const SuccessStories = () => {
                 <img 
                   src={story.image} 
                   alt={story.title}
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full p-4"
                 />
               </div>
               <div className={`flex flex-col flex-1 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
