@@ -1,4 +1,4 @@
-import { Rocket, Users, Zap, Search, LineChart, FileText } from "lucide-react";
+import { Rocket, Users, Zap, Search, LineChart, FileText, Target, Tool, Upload, Share, Library } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 const features = [
@@ -29,6 +29,34 @@ const features = [
   },
 ];
 
+const steps = [
+  {
+    title: "Choose Your Target",
+    description: "Select high-demanding mini application ideas that are relevant to your audience",
+    icon: Target,
+  },
+  {
+    title: "Build the Tool",
+    description: "Use ToolzFlow to quickly create a simple, keyword-targeted application",
+    icon: Tool,
+  },
+  {
+    title: "Deploy",
+    description: "Add the app to your website optimizing for chosen keywords",
+    icon: Upload,
+  },
+  {
+    title: "Share and Track",
+    description: "Publish your app page and monitor its impact on traffic and leads",
+    icon: Share,
+  },
+  {
+    title: "Grow Your Arsenal",
+    description: "Easily create more web apps to multiply your SEO growth",
+    icon: Library,
+  },
+];
+
 export const Features = () => {
   return (
     <div className="w-full bg-slate-50">
@@ -40,7 +68,7 @@ export const Features = () => {
               Everything You Need to <span className="gradient-text">Scale Your SEO</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
             {features.map((feature) => (
               <Card key={feature.title} className="border h-full">
                 <CardContent className="pt-6">
@@ -56,6 +84,32 @@ export const Features = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="border-t pt-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+              How It <span className="gradient-text">Works</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+              {steps.map((step, index) => (
+                <Card key={step.title} className="border h-full">
+                  <CardContent className="pt-6">
+                    <div className="flex flex-col items-center text-center gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <step.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-xl mb-2">{step.title}</h3>
+                        <p className="text-muted-foreground">{step.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
