@@ -7,14 +7,14 @@ export const Hero = () => {
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-12">
           Want the same <span className="gradient-text">SEO growth</span>?
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-8">
-          We build SEO-optimized web mini apps. Get your first app within 7 days.
-        </p>
         <img 
           src="https://framerusercontent.com/images/4UbBrsXAbl3VywkQuCYTzUZC88.png?scale-down-to=1024&lossless=1"
           alt="ToolzFlow Hero"
-          className="w-full max-w-[600px] mx-auto mb-12"
+          className="w-full max-w-[600px] mx-auto mb-8"
         />
+        <p className="text-lg md:text-xl text-muted-foreground mb-12">
+          We build SEO-optimized web mini apps. Get your first app within 7 days.
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="text-lg">
             Book a Demo
