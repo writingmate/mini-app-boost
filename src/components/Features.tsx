@@ -36,9 +36,9 @@ const features = [
 
 const additionalFeatures = [
   {
-    title: "AI-Assisted SEO Content",
-    description: "Each app comes with human-written, AI-assisted SEO content to further strengthen your mini app's performance.",
-    icon: FileText
+    title: "Dedicated Engineer",
+    description: "You'll have a dedicated engineer working on your mini apps, ensuring consistent quality and quick iterations.",
+    icon: Brain
   },
   {
     title: "Continuous Optimization",
@@ -46,14 +46,14 @@ const additionalFeatures = [
     icon: LineChart
   },
   {
+    title: "AI-Assisted SEO Content",
+    description: "Each app comes with human-written, AI-assisted SEO content to further strengthen your mini app's performance.",
+    icon: FileText
+  },
+  {
     title: "Complete SEO Research Access",
     description: "Get access to our complete research, which may contain additional insights and ideas about your future apps.",
     icon: Database
-  },
-  {
-    title: "Dedicated Engineer",
-    description: "You'll have a dedicated engineer working on your mini apps, ensuring consistent quality and quick iterations.",
-    icon: Brain
   }
 ];
 
@@ -99,7 +99,7 @@ export const Features = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
               But This Is Not All
             </h2>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {additionalFeatures.map((feature) => (
                 <Card key={feature.title} className="border-primary/20">
                   <CardContent className="pt-6">
