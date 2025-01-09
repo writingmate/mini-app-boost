@@ -13,7 +13,7 @@ const stories = [
       "32,000 visitors in two months after release",
       "10,000+ visitors converted to users"
     ],
-    link: "#"
+    link: "https://writingmate.ai/free-tools/ai-answer-generator"
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const stories = [
       "In Google's top-3 with 1000+ keywords",
       "More than 2 million unique visits so far"
     ],
-    link: "#"
+    link: "https://createmysignature.com/"
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const stories = [
       "Google's top-3 for target keyword in 4 days",
       "In Google's top-3 for 15 keywords now"
     ],
-    link: "#"
+    link: "https://ankipro.net/pdf-to-anki"
   },
   {
     id: 4,
