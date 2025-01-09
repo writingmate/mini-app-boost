@@ -1,7 +1,6 @@
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
-import { format } from "date-fns";
 
 const features = [
   "Dedicated engineer",
@@ -14,8 +13,6 @@ const features = [
 ];
 
 export const Pricing = () => {
-  const currentDate = format(new Date(), 'MMMM yyyy');
-
   return (
     <div className="section-padding">
       <div className="max-w-6xl mx-auto text-center">
@@ -23,7 +20,7 @@ export const Pricing = () => {
           Simple, Transparent <span className="gradient-text">Pricing</span>
         </h2>
         <p className="text-muted-foreground mb-12">
-          Only <span className="text-primary font-semibold">2 slots left</span> {currentDate} out of 3 total client positions.
+          Only <span className="text-primary font-semibold">2 slots left</span> January 2025 out of 3 total client positions.
           <span className="block text-sm mt-1">1 slot already booked</span>
         </p>
         <Card className="max-w-lg mx-auto border">

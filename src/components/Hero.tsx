@@ -1,9 +1,6 @@
 import { Button } from "./ui/button";
-import { format } from "date-fns";
 
 export const Hero = () => {
-  const currentDate = format(new Date(), 'MMMM yyyy');
-
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center section-padding">
       <div className="max-w-4xl mx-auto text-center">
@@ -23,7 +20,7 @@ export const Hero = () => {
             Book a Call
           </Button>
           <p className="text-muted-foreground">
-            <span className="animate-pulse text-primary font-semibold">2</span> out of 3 slots left {currentDate}
+            <span className="animate-pulse text-primary font-semibold">2</span> out of 3 slots left January 2025
           </p>
         </div>
       </div>
