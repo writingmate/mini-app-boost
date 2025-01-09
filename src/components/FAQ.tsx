@@ -6,6 +6,10 @@ const faqItems = [
     answer: "Mini apps work effectively for everyone, but websites with a domain rating above 20 (based on Ahrefs or Semrush) are better positioned for success. If we don't believe we can help you, we'll let you know during our first call - no payment required."
   },
   {
+    question: "I already have blog with SEO articles, can you help me?",
+    answer: "Yes, we can improve your SEO articles by adding mini apps into existing content which may improve their ranking."
+  },
+  {
     question: "How long until I see results?",
     answer: "If you haven't previously invested in SEO, it typically takes 3-6 months to see significant results. SEO is a long-term strategy that builds a substantial competitive advantage. However, if you've already invested in SEO, you may start seeing results within weeks."
   },
