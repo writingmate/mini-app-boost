@@ -1,23 +1,23 @@
 const steps = [
   {
-    title: "Discovery Call",
-    description: "We discuss your goals and identify opportunities for SEO growth",
+    title: "Choose Your Target",
+    description: "Select high-demanding mini application ideas that are relevant to your audience",
   },
   {
-    title: "Strategy Session",
-    description: "Our team develops a custom plan for your mini apps",
+    title: "Build the Tool",
+    description: "Use ToolzFlow to quickly create a simple, keyword-targeted application",
   },
   {
-    title: "First App Delivery",
-    description: "Get your first SEO-optimized app within 7 days",
+    title: "Deploy",
+    description: "Add the app to your website optimizing for chosen keywords",
   },
   {
-    title: "Optimization",
-    description: "We iterate based on data to maximize conversions",
+    title: "Share and Track",
+    description: "Publish your app page and monitor its impact on traffic and leads",
   },
   {
-    title: "Scale & Grow",
-    description: "Continue building your app portfolio for compound SEO benefits",
+    title: "Grow Your Arsenal",
+    description: "Easily create more web apps to multiply your SEO growth",
   },
 ];
 
