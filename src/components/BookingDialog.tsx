@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -26,23 +26,29 @@ declare global {
 }
 
 export const BookingDialog = ({ variant, size, className, children }: BookingDialogProps) => {
-  useEffect(() => {
-    const loadCalendar = () => {
-      if (window.calendar?.schedulingButton) {
-        window.calendar.schedulingButton.load({
-          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ZPmjksfkBabI9N6kN9aoIK2wy8sTGO1b_8p_GHOgf5B1MgLWouaGNDOqFwjHTu6Gyol8sLXes?gv=true',
-          color: '#039BE5',
-          label: 'Book an appointment',
-          target: document.getElementById('calendar-container'),
-        });
-      }
-    };
+  const [isOpen, setIsOpen] = useState(false);
 
-    loadCalendar();
-  }, []);
+  useEffect(() => {
+    if (isOpen) {
+      // Small delay to ensure the dialog content is rendered
+      const timer = setTimeout(() => {
+        const container = document.getElementById('calendar-container');
+        if (container && window.calendar?.schedulingButton) {
+          window.calendar.schedulingButton.load({
+            url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ZPmjksfkBabI9N6kN9aoIK2wy8sTGO1b_8p_GHOgf5B1MgLWouaGNDOqFwjHTu6Gyol8sLXes?gv=true',
+            color: '#039BE5',
+            label: 'Book an appointment',
+            target: container,
+          });
+        }
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   return (
-    <Dialog>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button variant={variant} size={size} className={className}>
           {children}
