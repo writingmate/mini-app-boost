@@ -12,8 +12,7 @@ const stories = [
       "32,000 visitors in two months after release",
       "10,000+ visitors converted to users"
     ],
-    link: "#",
-    image: "https://framerusercontent.com/images/Okx48o4rpiyqTDpnoD6E1tcBpM.png?scale-down-to=512&lossless=1"
+    link: "#"
   },
   {
     id: 2,
@@ -24,8 +23,7 @@ const stories = [
       "In Google's top-3 with 1000+ keywords",
       "More than 2 million unique visits so far"
     ],
-    link: "#",
-    image: "https://framerusercontent.com/images/W361sbqOshdIPX5WUotjLLTrSM.png?scale-down-to=512&lossless=1"
+    link: "#"
   },
   {
     id: 3,
@@ -37,8 +35,7 @@ const stories = [
       "Google's top-3 for target keyword in 4 days",
       "In Google's top-3 for 15 keywords now"
     ],
-    link: "#",
-    image: "https://framerusercontent.com/images/nYgGvQCT99vUl28tZooU4mqM.png?scale-down-to=512&lossless=1"
+    link: "#"
   }
 ];
 
@@ -51,15 +48,8 @@ export const SuccessStories = () => {
         </h2>
         <div className="space-y-8">
           {stories.map((story, index) => (
-            <Card key={story.id} className="flex flex-col md:flex-row overflow-hidden">
-              <div className={`relative w-full md:w-1/2 h-64 md:h-auto ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                <img 
-                  src={story.image} 
-                  alt={story.title}
-                  className="object-cover w-full h-full p-4 max-w-[240px] mx-auto rounded-lg"
-                />
-              </div>
-              <div className={`flex flex-col flex-1 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+            <Card key={story.id} className="flex flex-col">
+              <div className="flex flex-col flex-1">
                 <CardHeader>
                   <CardTitle className="text-xl">{story.title}</CardTitle>
                 </CardHeader>
