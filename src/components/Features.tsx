@@ -1,6 +1,5 @@
-import { Rocket, Users, Phone, Search, LineChart, FileText, Upload, Zap } from "lucide-react";
+import { Rocket, Users, Phone, Search, LineChart, Zap } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
-import { Separator } from "./ui/separator";
 
 const features = [
   {
@@ -16,35 +15,23 @@ const features = [
     step: 2
   },
   {
-    title: "Rapid App Delivery",
-    description: "Experience our accelerated development process, delivering your custom applications with exceptional speed and quality.",
+    title: "Day 7: Rapid App Delivery",
+    description: "On 7th day, you'll get your first app shipped. After that we can move much faster, as fast as an app every 2 days.",
     icon: Zap,
-    step: 3
-  },
-  {
-    title: "SEO Content Creation",
-    description: "Get human-written, AI-assisted SEO content specifically crafted for your application to maximize its impact.",
-    icon: FileText,
-    step: 4
-  },
-  {
-    title: "Deployment",
-    description: "We handle the seamless publication of your app to your website, ensuring proper integration and functionality.",
-    icon: Upload,
-    step: 5
-  },
-  {
-    title: "Optimization",
-    description: "We continuously monitor engagement metrics and optimize applications for better conversion rates, ensuring maximum ROI.",
-    icon: LineChart,
-    step: 6
-  },
-  {
-    title: "Scale Up",
-    description: "Repeat the process for up to 15 apps in a month, rapidly expanding your digital presence and SEO impact.",
-    icon: Users,
     step: 7
   },
+  {
+    title: "Day 9: Optimization",
+    description: "We closely monitor app engagement and make tweaks for better key event conversion whether it's registration, etc.",
+    icon: LineChart,
+    step: 9
+  },
+  {
+    title: "Day 10: Scale Up",
+    description: "We use the learnings to quickly build new apps for you to drive even more traffic.",
+    icon: Users,
+    step: 10
+  }
 ];
 
 export const Features = () => {
