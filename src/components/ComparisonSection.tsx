@@ -1,4 +1,4 @@
-import { X, Check, Brain, Zap, Target, Clock, Robot, TrendingUp } from "lucide-react";
+import { X, Check, Brain, Zap, Target, Clock, Bot, TrendingUp } from "lucide-react";
 import { Card } from "./ui/card";
 
 export const ComparisonSection = () => {
@@ -17,7 +17,7 @@ export const ComparisonSection = () => {
             {/* Traditional AI Content Side */}
             <Card className="p-8 border-destructive/20 bg-white/50">
               <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-                <Robot className="w-6 h-6 text-destructive/70" />
+                <Bot className="w-6 h-6 text-destructive/70" />
                 Traditional AI Content
               </h3>
               <ul className="space-y-4">
