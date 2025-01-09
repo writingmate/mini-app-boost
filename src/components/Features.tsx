@@ -4,31 +4,31 @@ import { Card, CardContent } from "./ui/card";
 const features = [
   {
     title: "Day 1: Strategy Call",
-    description: "We do an intake, review your goals in a focused 30-minute strategy call to align our efforts with your business objectives.",
+    description: "We start with a focused 30-minute call to understand your business goals and create a clear plan together.",
     icon: Phone,
     step: 1
   },
   {
     title: "Day 2: App Selection & Research",
-    description: "We conduct thorough SEO research and provide mini app recommendations tailored to your market opportunities.",
+    description: "Our team researches your market and competitors to find the best opportunities. We then suggest the most effective mini apps for your business.",
     icon: Search,
     step: 2
   },
   {
     title: "Day 7: Rapid App Delivery",
-    description: "On 7th day, you'll get your first app shipped. After that we can move much faster, as fast as an app every 2 days.",
+    description: "Your first mini app goes live! After this, we speed up the process to deliver a new app every 2 days.",
     icon: Zap,
     step: 7
   },
   {
     title: "Day 9: Optimization",
-    description: "We closely monitor app engagement and make tweaks for better key event conversion whether it's registration, etc.",
+    description: "We track how users interact with your apps and make improvements to increase sign-ups and other important actions.",
     icon: LineChart,
     step: 9
   },
   {
     title: "Day 10: Scale Up",
-    description: "We use the learnings to quickly build new apps for you to drive even more traffic.",
+    description: "Using what we've learned, we quickly create more apps to bring even more visitors to your business.",
     icon: Users,
     step: 10
   }
@@ -42,7 +42,7 @@ export const Features = () => {
           <div className="flex items-center justify-center gap-3 mb-12">
             <Rocket className="w-8 h-8 text-primary" />
             <h2 className="text-3xl md:text-4xl font-bold text-center">
-              Everything You Need to <span className="gradient-text">Scale Your SEO</span>
+              Step by Step Plan to <span className="gradient-text">Scale Your SEO with Mini Apps</span>
             </h2>
           </div>
           <div className="relative">
