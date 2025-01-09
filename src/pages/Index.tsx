@@ -7,12 +7,10 @@ import { TeamSection } from "@/components/TeamSection";
 import { FAQ } from "@/components/FAQ";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
       <Hero />
       <Features />
       <ComparisonSection />
