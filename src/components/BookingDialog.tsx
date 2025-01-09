@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 interface BookingDialogProps {
   variant?: "default" | "outline";
-  size?: "default" | "lg";
+  size?: "default" | "lg" | "sm";
   className?: string;
   children?: React.ReactNode;
 }
