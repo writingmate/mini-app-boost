@@ -23,7 +23,7 @@ export const ComparisonSection = () => {
               <ul className="space-y-4">
                 {[
                   "Generic, meningless AI-based content",
-                  "AI generated content poorly on Google",
+                  "AI generated content performs poorly on Google",
                   "Static pages drive low engagement",
                   "No user integration insights"
                 ].map((item) => (
