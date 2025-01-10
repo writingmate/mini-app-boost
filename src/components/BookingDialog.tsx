@@ -11,9 +11,10 @@ export const BookingDialog = ({ variant, size, className, children }: BookingDia
   return (
     <div className="flex justify-center w-full">
       <a 
-        href="https://calendar.app.google/Dsif1xzxbXL9M2BcA" 
+        href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1xzxbXL9M2BcA"
         target="_blank" 
         rel="noopener noreferrer"
+        className="inline-block"
       >
         <Button variant={variant} size={size} className={className}>
           {children}
