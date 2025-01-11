@@ -22,7 +22,7 @@ export const Header = () => {
           </a>
           <BookingDialog 
             size="default"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
           >
             Book a Call
           </BookingDialog>
