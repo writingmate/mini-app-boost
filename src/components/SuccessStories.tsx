@@ -65,7 +65,7 @@ export const SuccessStories = () => {
               key={story.id} 
               className={`flex flex-col ${
                 story.id === 4 
-                  ? "bg-purple-50 border-purple-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" 
+                  ? "bg-purple-50 border-purple-100 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl" 
                   : ""
               }`}
             >
