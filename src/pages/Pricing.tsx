@@ -57,15 +57,17 @@ const PricingPage = () => {
                 <TableHead className="w-[250px]">Features</TableHead>
                 {plans.map((plan) => (
                   <TableHead key={plan.name} className="text-center">
-                    <div className="space-y-2">
-                      <h3 className="font-bold text-lg">{plan.name}</h3>
-                      <div className="text-2xl font-bold">{plan.price}</div>
-                      <div className="text-sm text-muted-foreground">per {plan.period}</div>
-                      {plan.pricePerMonth && (
-                        <div className="text-sm text-primary">{plan.pricePerMonth}/month</div>
-                      )}
+                    <div className="flex flex-col items-center justify-between min-h-[200px] p-4">
+                      <div className="space-y-2 text-center">
+                        <h3 className="font-bold text-lg">{plan.name}</h3>
+                        <div className="text-2xl font-bold">{plan.price}</div>
+                        <div className="text-sm text-muted-foreground">per {plan.period}</div>
+                        {plan.pricePerMonth && (
+                          <div className="text-sm text-primary">{plan.pricePerMonth}/month</div>
+                        )}
+                      </div>
                       <BookingDialog 
-                        className="mt-4 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200"
                       >
                         Get Started
                       </BookingDialog>
