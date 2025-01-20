@@ -101,39 +101,15 @@ const PricingPage = () => {
               <TableBody>
                 <TableRow>
                   <TableCell className="font-medium">
-                    Extra Apps Included
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        Number of apps our team will build for you
-                      </TooltipContent>
-                    </Tooltip>
-                    <div className="text-sm text-muted-foreground">Accelerate your business growth</div>
-                  </TableCell>
-                  {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">{plan.appsBuilt}</TableCell>
-                  ))}
-                </TableRow>
-
-                <TableRow>
-                  <TableCell className="font-medium">
                     App Limit
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        Maximum number of apps you can create
-                      </TooltipContent>
-                    </Tooltip>
+                    <div className="flex items-center gap-2">
+                      <span>Unlimited</span>
+                      <Check className="h-4 w-4 text-primary" />
+                    </div>
                     <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
                   </TableCell>
                   {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">
-                      {plan.appLimit}
-                    </TableCell>
+                    <TableCell key={plan.name} className="text-center">{plan.appLimit}</TableCell>
                   ))}
                 </TableRow>
 
@@ -163,7 +139,45 @@ const PricingPage = () => {
 
                 <TableRow>
                   <TableCell className="font-medium">
-                    App Building
+                    App Hosting Included
+                    <div className="text-sm text-muted-foreground">Save $50-200 per month on hosting costs</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.hosting ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    Keyword Analysis & Competitive Research
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        It's hard to come up with good app ideas. We help you with in-depth SEO keyword analysis and competitive research
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Identify high-value opportunities</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.keywordAnalysis ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    App Building Services
                     <Tooltip>
                       <TooltipTrigger>
                         <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
@@ -181,58 +195,13 @@ const PricingPage = () => {
 
                 <TableRow>
                   <TableCell className="font-medium">
-                    App Hosting Included
-                    <div className="text-sm text-muted-foreground">Save $50-200 per month on hosting costs</div>
-                  </TableCell>
-                  {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">
-                      {plan.hosting ? (
-                        <Check className="h-5 w-5 text-primary mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-destructive mx-auto" />
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">
-                    Keyword Analysis & Competitive Research
-                    <div className="text-sm text-muted-foreground">Identify high-value opportunities</div>
-                  </TableCell>
-                  {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">
-                      {plan.keywordAnalysis ? (
-                        <Check className="h-5 w-5 text-primary mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-destructive mx-auto" />
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">
-                    App Optimization for Conversion Rates
-                    <div className="text-sm text-muted-foreground">Drives 10-30% more traffic</div>
-                  </TableCell>
-                  {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">
-                      {plan.optimization ? (
-                        <Check className="h-5 w-5 text-primary mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-destructive mx-auto" />
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">
                     SEO Content
                     <Tooltip>
                       <TooltipTrigger>
                         <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        Professional SEO content writing and optimization services
+                        Apps need high quality content to rank high on search engines, we help you write it.
                       </TooltipContent>
                     </Tooltip>
                     <div className="text-sm text-muted-foreground">Increase organic traffic by 40-60%</div>
@@ -245,20 +214,20 @@ const PricingPage = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell className="font-medium">
-                    Dedicated Slack Support
+                    App Optimization for Conversion Rates
                     <Tooltip>
                       <TooltipTrigger>
                         <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        Private Slack channel for direct support access
+                        Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates. We can help (up to 3 optimizations for each app)
                       </TooltipContent>
                     </Tooltip>
-                    <div className="text-sm text-muted-foreground">Get help within 4 business hours</div>
+                    <div className="text-sm text-muted-foreground">Drives 10-30% more traffic</div>
                   </TableCell>
                   {plans.map((plan) => (
                     <TableCell key={plan.name} className="text-center">
-                      {plan.dedicatedSupport ? (
+                      {plan.optimization ? (
                         <Check className="h-5 w-5 text-primary mx-auto" />
                       ) : (
                         <X className="h-5 w-5 text-destructive mx-auto" />
