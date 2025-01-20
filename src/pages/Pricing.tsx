@@ -101,10 +101,12 @@ const PricingPage = () => {
           <TableBody>
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <Database className="h-5 w-5 text-primary" />
-                  Apps Limit
-                  <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Database className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Apps Limit</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">Create as many apps as you need</div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -119,10 +121,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-primary" />
-                  White Labeling
-                  <div className="text-sm text-muted-foreground">Remove our branding from your apps and brand them as your own</div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-primary" />
+                    <span className="font-medium">White Labeling</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">Remove our branding from your apps and brand them as your own</div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -138,10 +142,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <Server className="h-5 w-5 text-primary" />
-                  App Hosting
-                  <div className="text-sm text-muted-foreground">Save $50-200 per month on hosting costs</div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Server className="h-5 w-5 text-primary" />
+                    <span className="font-medium">App Hosting</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">Save $50-200 per month on hosting costs</div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -157,10 +163,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <ChartBar className="h-5 w-5 text-primary" />
-                  Keyword Analysis & Competitive Research
-                  <div className="text-sm text-muted-foreground">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Keyword Analysis & Competitive Research</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
                     It's hard to come up with good app ideas. We help you with in-depth SEO keyword analysis and competitive research
                   </div>
                 </div>
@@ -178,10 +186,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <RocketIcon className="h-5 w-5 text-primary" />
-                  App Building Services
-                  <div className="text-sm text-muted-foreground">Need help building apps, we are here to help</div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <RocketIcon className="h-5 w-5 text-primary" />
+                    <span className="font-medium">App Building Services</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">{plans[0].builder}</div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -193,10 +203,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <ChartBar className="h-5 w-5 text-primary" />
-                  SEO Content
-                  <div className="text-sm text-muted-foreground">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    <span className="font-medium">SEO Content</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
                     Apps need high quality content to rank high on search engines, we help you write it
                   </div>
                 </div>
@@ -210,11 +222,13 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <ChartBar className="h-5 w-5 text-primary" />
-                  App Optimization for Conversion Rates
-                  <div className="text-sm text-muted-foreground">
-                    Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates.
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    <span className="font-medium">App Optimization for Conversion Rates</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
+                    Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates
                   </div>
                 </div>
               </TableCell>
@@ -235,10 +249,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <div className="flex items-center gap-2">
-                  <User className="h-5 w-5 text-primary" />
-                  Dedicated Growth Engineer
-                  <div className="text-sm text-muted-foreground">A dedicated engineer to help with your growth strategy</div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <User className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Dedicated Growth Engineer</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">A dedicated engineer to help with your growth strategy</div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
