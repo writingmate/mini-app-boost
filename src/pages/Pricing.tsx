@@ -72,6 +72,45 @@ const PricingPage = () => {
       );
     }
 
+    // Handle app building services text
+    if (typeof value === 'string' && value.toLowerCase().includes('you build')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <X className="h-4 w-4 text-destructive" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    if (typeof value === 'string' && value.toLowerCase().includes('we build')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    // Handle optimization text
+    if (typeof value === 'string' && value.toLowerCase().includes('up to 3 optimizations')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    // Handle SEO content text
+    if (typeof value === 'string' && value.toLowerCase().includes('written & optimized')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
     if (typeof value === 'string' && value.toLowerCase().includes('best practice')) {
       return (
         <div className="flex items-center justify-center gap-2">
