@@ -116,6 +116,51 @@ const PricingPage = () => {
                     <TableCell key={plan.name} className="text-center">{plan.appsBuilt}</TableCell>
                   ))}
                 </TableRow>
+
+                <TableRow>
+                  <TableCell className="font-medium">
+                    App Limit
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Maximum number of apps you can create
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.appLimit}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow>
+                  <TableCell className="font-medium">
+                    White Labeling
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Remove our branding from your apps
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Brand apps as your own</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.whitelabeling ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
                 <TableRow>
                   <TableCell className="font-medium">
                     App Building
@@ -133,6 +178,7 @@ const PricingPage = () => {
                     <TableCell key={plan.name} className="text-center">{plan.builder}</TableCell>
                   ))}
                 </TableRow>
+
                 <TableRow>
                   <TableCell className="font-medium">
                     App Hosting Included
@@ -197,49 +243,6 @@ const PricingPage = () => {
                     </TableCell>
                   ))}
                 </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">
-                    App Limit
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        Maximum number of apps you can create
-                      </TooltipContent>
-                    </Tooltip>
-                    <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
-                  </TableCell>
-                  {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">
-                      {plan.appLimit}
-                    </TableCell>
-                  ))}
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">
-                    White Labeling
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        Remove our branding from your apps
-                      </TooltipContent>
-                    </Tooltip>
-                    <div className="text-sm text-muted-foreground">Brand apps as your own</div>
-                  </TableCell>
-                  {plans.map((plan) => (
-                    <TableCell key={plan.name} className="text-center">
-                      {plan.whitelabeling ? (
-                        <Check className="h-5 w-5 text-primary mx-auto" />
-                      ) : (
-                        <X className="h-5 w-5 text-destructive mx-auto" />
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-
                 <TableRow>
                   <TableCell className="font-medium">
                     Dedicated Slack Support
