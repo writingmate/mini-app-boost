@@ -67,16 +67,16 @@ const PricingPage = () => {
 
         <div className="overflow-x-auto">
           <TooltipProvider>
-            <Table className="border rounded-lg">
+            <Table className="border rounded-2xl overflow-hidden">
               <TableHeader>
-                <TableRow className="bg-muted/50">
+                <TableRow>
                   <TableHead className="w-[250px]">Features</TableHead>
                   {plans.map((plan) => (
                     <TableHead key={plan.name} className="text-center">
                       <div className="flex flex-col items-center justify-between min-h-[200px] p-4">
                         <div className="space-y-2 text-center">
-                          <h3 className="font-bold text-lg">{plan.name}</h3>
-                          <div className="text-2xl font-bold">{plan.price}</div>
+                          <h3 className="font-bold text-lg text-foreground">{plan.name}</h3>
+                          <div className="text-2xl font-bold text-foreground">{plan.price}</div>
                           <div className="text-sm text-muted-foreground">per {plan.period}</div>
                           {plan.pricePerMonth && (
                             <div className="text-sm text-primary">{plan.pricePerMonth}/month</div>
