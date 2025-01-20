@@ -56,10 +56,9 @@ const plans = [
   },
 ];
 
-const PricingPage = () => {
+export const Pricing = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="section-padding">
+    <div className="section-padding">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
           Choose Your <span className="gradient-text">Plan</span>
         </h1>
@@ -67,37 +66,38 @@ const PricingPage = () => {
           Only <span className="text-primary font-semibold">2 slots left</span> January 2025 out of 3 total client positions.
           <span className="block text-sm mt-1">1 slot already booked</span>
         </p>
-
-        <div className="overflow-x-auto">
-          <TooltipProvider>
-            <Table className="border rounded-2xl overflow-hidden">
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[250px]">Features</TableHead>
-                  {plans.map((plan) => (
-                    <TableHead key={plan.name} className="text-center">
-                      <div className="flex flex-col items-center justify-between min-h-[200px] p-4">
-                        <div className="space-y-4 text-center">
-                          <h3 className="font-bold text-xl text-foreground tracking-tight">{plan.name}</h3>
-                          <div>
-                            <div className="text-3xl font-bold text-primary">{plan.price}</div>
-                            <div className="text-sm text-muted-foreground mt-1">per {plan.period}</div>
-                            {plan.pricePerMonth && (
-                              <div className="text-sm text-primary font-medium mt-1">{plan.pricePerMonth}/month</div>
-                            )}
-                          </div>
+      
+      <div className="overflow-x-auto">
+        <TooltipProvider>
+          <Table className="border rounded-2xl overflow-hidden">
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[250px]">Features</TableHead>
+                {plans.map((plan) => (
+                  <TableHead key={plan.name} className="text-center">
+                    <div className="flex flex-col items-center justify-between min-h-[180px] p-4">
+                      <div className="space-y-2 text-center">
+                        <h3 className="font-bold text-xl text-foreground tracking-tight">{plan.name}</h3>
+                        <div>
+                          <div className="text-3xl font-bold text-primary">{plan.price}</div>
+                          <div className="text-sm text-muted-foreground mt-1">per {plan.period}</div>
+                          {plan.pricePerMonth && (
+                            <div className="text-sm text-primary font-medium mt-1">{plan.pricePerMonth}/month</div>
+                          )}
                         </div>
-                        <BookingDialog 
-                          size="lg" 
-                          className="w-full text-xl px-12 py-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
-                        >
-                          Book a Call
-                        </BookingDialog>
                       </div>
-                    </TableHead>
-                  ))}
-                </TableRow>
-              </TableHeader>
+                      <BookingDialog 
+                        size="default"
+                        className="px-6 py-2"
+                      >
+                        Book a Call
+                      </BookingDialog>
+                    </div>
+                  </TableHead>
+                ))}
+              </TableRow>
+            </TableHeader>
+            
               <TableBody>
                 <TableRow>
                   <TableCell className="font-medium">
@@ -290,12 +290,14 @@ const PricingPage = () => {
                   ))}
                 </TableRow>
               </TableBody>
-            </Table>
-          </TooltipProvider>
-        </div>
+            
+          </Table>
+        </TooltipProvider>
       </div>
+      
       <CallToAction />
       <Footer />
+      
     </div>
   );
 };
