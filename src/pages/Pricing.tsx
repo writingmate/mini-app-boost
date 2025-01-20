@@ -77,7 +77,7 @@ const PricingPage = () => {
       return (
         <div className="flex items-center justify-center gap-2">
           <X className="h-4 w-4 text-destructive" />
-          <span>{value}</span>
+          <span>You build the apps</span>
         </div>
       );
     }
@@ -96,7 +96,7 @@ const PricingPage = () => {
       return (
         <div className="flex items-center justify-center gap-2">
           <Check className="h-4 w-4 text-primary" />
-          <span>{value}</span>
+          <span>Up to 3 optimizations for each app</span>
         </div>
       );
     }
