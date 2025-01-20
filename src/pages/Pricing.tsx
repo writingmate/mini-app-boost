@@ -54,6 +54,36 @@ const plans = [
 ];
 
 const PricingPage = () => {
+  const renderFeatureValue = (value: any) => {
+    if (typeof value === 'boolean') {
+      return value ? (
+        <Check className="h-5 w-5 text-primary mx-auto" />
+      ) : (
+        <X className="h-5 w-5 text-destructive mx-auto" />
+      );
+    }
+    
+    if (value === "Not included") {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <X className="h-4 w-4 text-destructive" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    if (typeof value === 'string' && value.toLowerCase().includes('best practice')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    return value;
+  };
+
   return (
     <div className="section-padding">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
@@ -217,7 +247,7 @@ const PricingPage = () => {
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center text-sm">
-                  {plan.seoContent}
+                  {renderFeatureValue(plan.seoContent)}
                 </TableCell>
               ))}
             </TableRow>
