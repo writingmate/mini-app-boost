@@ -38,7 +38,7 @@ const plans = [
     hosting: true,
     keywordAnalysis: true,
     optimization: true,
-    seoContent: "Written & optimized for you",
+    seoContent: "Written & optimized by our SEO experts",
   },
 ];
 
