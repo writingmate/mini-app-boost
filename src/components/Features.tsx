@@ -71,7 +71,7 @@ export const Features = () => {
                          style={{ display: index === features.length - 1 ? 'none' : 'block' }} />
                   </div>
                   <Card className="flex-1 border-primary/20">
-                    <CardContent className="pt-6">
+                    <CardContent className="pt-6 pb-8">
                       <div className="flex items-start gap-4">
                         <div className="mt-1 bg-primary/10 p-2 rounded-full">
                           <feature.icon className="h-5 w-5 text-primary" />
@@ -95,7 +95,7 @@ export const Features = () => {
             <div className="grid gap-6 md:grid-cols-2">
               {additionalFeatures.map((feature) => (
                 <Card key={feature.title} className="border-primary/20">
-                  <CardContent className="pt-6">
+                  <CardContent className="pt-6 pb-8">
                     <div className="flex flex-col items-center text-center gap-4">
                       <div className="bg-primary/10 p-3 rounded-full">
                         <feature.icon className="h-6 w-6 text-primary" />
