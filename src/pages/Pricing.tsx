@@ -32,7 +32,7 @@ const plans = [
     name: "ToolzFlow Agency",
     price: "$5,000",
     period: "month",
-    appsBuilt: "15",
+    appsBuilt: "up to 15",
     builder: "First 15 apps in first 30 days",
     builderTooltip: "Our team builds up to 15 apps within 30 days or until completion (whichever comes first). After that, you'll build additional apps.",
     hosting: true,
@@ -92,6 +92,7 @@ const PricingPage = () => {
                         Number of apps our team will build for you
                       </TooltipContent>
                     </Tooltip>
+                    <div className="text-sm text-muted-foreground">Accelerate your business growth</div>
                   </TableCell>
                   {plans.map((plan) => (
                     <TableCell key={plan.name} className="text-center">{plan.appsBuilt}</TableCell>
@@ -105,52 +106,60 @@ const PricingPage = () => {
                         <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p className="max-w-[200px]">{plan.builderTooltip || plan.builder}</p>
+                        <p className="max-w-[200px]">{plans[2].builderTooltip}</p>
                       </TooltipContent>
                     </Tooltip>
+                    <div className="text-sm text-muted-foreground">Get your apps built faster</div>
                   </TableCell>
                   {plans.map((plan) => (
                     <TableCell key={plan.name} className="text-center">{plan.builder}</TableCell>
                   ))}
                 </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">App Hosting Included</TableCell>
-                {plans.map((plan) => (
-                  <TableCell key={plan.name} className="text-center">
-                    {plan.hosting ? (
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    ) : (
-                      <X className="h-5 w-5 text-destructive mx-auto" />
-                    )}
+                <TableRow>
+                  <TableCell className="font-medium">
+                    App Hosting Included
+                    <div className="text-sm text-muted-foreground">Save $50-200 per month on hosting costs</div>
                   </TableCell>
-                ))}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">Keyword Analysis & Competitive Research</TableCell>
-                {plans.map((plan) => (
-                  <TableCell key={plan.name} className="text-center">
-                    {plan.keywordAnalysis ? (
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    ) : (
-                      <X className="h-5 w-5 text-destructive mx-auto" />
-                    )}
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.hosting ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    Keyword Analysis & Competitive Research
+                    <div className="text-sm text-muted-foreground">Identify high-value opportunities</div>
                   </TableCell>
-                ))}
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-medium">App Optimization for Conversion Rates
-                  <div className="text-sm text-muted-foreground">Drives 10-30% more traffic</div>
-                </TableCell>
-                {plans.map((plan) => (
-                  <TableCell key={plan.name} className="text-center">
-                    {plan.optimization ? (
-                      <Check className="h-5 w-5 text-primary mx-auto" />
-                    ) : (
-                      <X className="h-5 w-5 text-destructive mx-auto" />
-                    )}
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.keywordAnalysis ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    App Optimization for Conversion Rates
+                    <div className="text-sm text-muted-foreground">Drives 10-30% more traffic</div>
                   </TableCell>
-                ))}
-              </TableRow>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.optimization ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
                 <TableRow>
                   <TableCell className="font-medium">
                     SEO Content
@@ -162,6 +171,7 @@ const PricingPage = () => {
                         Professional SEO content writing and optimization services
                       </TooltipContent>
                     </Tooltip>
+                    <div className="text-sm text-muted-foreground">Increase organic traffic by 40-60%</div>
                   </TableCell>
                   {plans.map((plan) => (
                     <TableCell key={plan.name} className="text-center text-sm">
