@@ -1,5 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Check, X } from "lucide-react";
+import { Check, X, Database, Server, RocketIcon, ChartBar, Users, User } from "lucide-react";
 import { BookingDialog } from "@/components/BookingDialog";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
@@ -97,8 +97,11 @@ const PricingPage = () => {
           <TableBody>
             <TableRow>
               <TableCell className="font-medium">
-                Apps Limit
-                <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
+                <div className="flex items-center gap-2">
+                  <Database className="h-5 w-5 text-primary" />
+                  Apps Limit
+                  <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
@@ -112,8 +115,11 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                White Labeling
-                <div className="text-sm text-muted-foreground">Remove our branding from your apps and brand them as your own</div>
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-primary" />
+                  White Labeling
+                  <div className="text-sm text-muted-foreground">Remove our branding from your apps and brand them as your own</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
@@ -128,8 +134,11 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                App Hosting Included
-                <div className="text-sm text-muted-foreground">Save $50-200 per month on hosting costs</div>
+                <div className="flex items-center gap-2">
+                  <Server className="h-5 w-5 text-primary" />
+                  App Hosting
+                  <div className="text-sm text-muted-foreground">Save $50-200 per month on hosting costs</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
@@ -144,9 +153,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                Keyword Analysis & Competitive Research
-                <div className="text-sm text-muted-foreground">
-                  It's hard to come up with good app ideas. We help you with in-depth SEO keyword analysis and competitive research
+                <div className="flex items-center gap-2">
+                  <ChartBar className="h-5 w-5 text-primary" />
+                  Keyword Analysis & Competitive Research
+                  <div className="text-sm text-muted-foreground">
+                    It's hard to come up with good app ideas. We help you with in-depth SEO keyword analysis and competitive research
+                  </div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -162,8 +174,11 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                App Building Services
-                <div className="text-sm text-muted-foreground">Need help building apps, we are here to help</div>
+                <div className="flex items-center gap-2">
+                  <RocketIcon className="h-5 w-5 text-primary" />
+                  App Building Services
+                  <div className="text-sm text-muted-foreground">Need help building apps, we are here to help</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center text-sm">
@@ -174,9 +189,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                SEO Content
-                <div className="text-sm text-muted-foreground">
-                  Apps need high quality content to rank high on search engines, we help you write it
+                <div className="flex items-center gap-2">
+                  <ChartBar className="h-5 w-5 text-primary" />
+                  SEO Content
+                  <div className="text-sm text-muted-foreground">
+                    Apps need high quality content to rank high on search engines, we help you write it
+                  </div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -188,9 +206,12 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                App Optimization for Conversion Rates
-                <div className="text-sm text-muted-foreground">
-                  Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates.
+                <div className="flex items-center gap-2">
+                  <ChartBar className="h-5 w-5 text-primary" />
+                  App Optimization for Conversion Rates
+                  <div className="text-sm text-muted-foreground">
+                    Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates.
+                  </div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
@@ -210,8 +231,11 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                Dedicated Growth Engineer
-                <div className="text-sm text-muted-foreground">A dedicated engineer to help with your growth strategy</div>
+                <div className="flex items-center gap-2">
+                  <User className="h-5 w-5 text-primary" />
+                  Dedicated Growth Engineer
+                  <div className="text-sm text-muted-foreground">A dedicated engineer to help with your growth strategy</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
