@@ -26,7 +26,7 @@ const plans = [
     period: "6 months",
     pricePerMonth: "$167",
     appsBuilt: "3",
-    builder: "First 3 apps in first 30 days",
+    builder: "Need help building apps, we are here to help",
     hosting: true,
     keywordAnalysis: true,
     optimization: false,
@@ -41,10 +41,10 @@ const plans = [
     price: "$5,000",
     period: "month",
     appsBuilt: "up to 15",
-    builder: "First 15 apps in first 30 days",
+    builder: "Need help building apps, we are here to help",
     hosting: true,
     keywordAnalysis: true,
-    optimization: true,
+    optimization: "Up to 3 optimizations for each app",
     seoContent: "Written & optimized by our SEO experts",
     appLimit: "Unlimited",
     whitelabeling: true,
@@ -167,7 +167,7 @@ const PricingPage = () => {
             <TableRow>
               <TableCell className="font-medium">
                 App Building Services
-                <div className="text-sm text-muted-foreground">We build up to 15 first apps for you</div>
+                <div className="text-sm text-muted-foreground">Need help building apps, we are here to help</div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center text-sm">
@@ -194,15 +194,19 @@ const PricingPage = () => {
               <TableCell className="font-medium">
                 App Optimization for Conversion Rates
                 <div className="text-sm text-muted-foreground">
-                  Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates. We can help (up to 3 optimizations for each app)
+                  Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates.
                 </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.optimization ? (
-                    <Check className="h-5 w-5 text-primary mx-auto" />
+                  {typeof plan.optimization === 'boolean' ? (
+                    plan.optimization ? (
+                      <Check className="h-5 w-5 text-primary mx-auto" />
+                    ) : (
+                      <X className="h-5 w-5 text-destructive mx-auto" />
+                    )
                   ) : (
-                    <X className="h-5 w-5 text-destructive mx-auto" />
+                    plan.optimization
                   )}
                 </TableCell>
               ))}
