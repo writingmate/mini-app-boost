@@ -14,6 +14,8 @@ const plans = [
     keywordAnalysis: false,
     optimization: false,
     seoContent: "Not included",
+    appLimit: "Unlimited",
+    whitelabeling: true,
   },
   {
     name: "ToolzFlow Six Month",
@@ -27,6 +29,8 @@ const plans = [
     keywordAnalysis: true,
     optimization: false,
     seoContent: "Best practice guide provided",
+    appLimit: "Unlimited",
+    whitelabeling: true,
   },
   {
     name: "ToolzFlow Agency",
@@ -39,6 +43,8 @@ const plans = [
     keywordAnalysis: true,
     optimization: true,
     seoContent: "Written & optimized by our SEO experts",
+    appLimit: "Unlimited",
+    whitelabeling: true,
   },
 ];
 
@@ -176,6 +182,48 @@ const PricingPage = () => {
                   {plans.map((plan) => (
                     <TableCell key={plan.name} className="text-center text-sm">
                       {plan.seoContent}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    App Limit
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Maximum number of apps you can create
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.appLimit}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    White Labeling
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Remove our branding from your apps
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Brand apps as your own</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.whitelabeling ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
                     </TableCell>
                   ))}
                 </TableRow>
