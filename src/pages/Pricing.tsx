@@ -26,7 +26,7 @@ const plans = [
     period: "6 months",
     pricePerMonth: "$167",
     appsBuilt: "3",
-    builder: "Need help building apps, we are here to help",
+    builder: "We build up to 3 apps",
     hosting: true,
     keywordAnalysis: true,
     optimization: false,
@@ -41,7 +41,7 @@ const plans = [
     price: "$5,000",
     period: "month",
     appsBuilt: "up to 15",
-    builder: "Need help building apps, we are here to help",
+    builder: "We build up to 15 apps",
     hosting: true,
     keywordAnalysis: true,
     optimization: "Up to 3 optimizations for each app",
@@ -191,7 +191,9 @@ const PricingPage = () => {
                     <RocketIcon className="h-5 w-5 text-primary" />
                     <span className="font-medium">App Building Services</span>
                   </div>
-                  <div className="text-sm text-muted-foreground pl-7">{plans[0].builder}</div>
+                  <div className="text-sm text-muted-foreground pl-7">
+                    Need help building apps, we are here to help
+                  </div>
                 </div>
               </TableCell>
               {plans.map((plan) => (
