@@ -69,7 +69,7 @@ const PricingPage = () => {
           <TableHeader>
             <TableRow>
               <TableHead className="w-[250px]">Features</TableHead>
-              {plans.map((plan) => (
+              {plans.map((plan, index) => (
                 <TableHead key={plan.name} className="text-center">
                   <div className="flex flex-col items-center justify-between min-h-[180px] p-4">
                     <div className="space-y-2 text-center">
@@ -79,6 +79,10 @@ const PricingPage = () => {
                         <div className="text-sm text-muted-foreground mt-1">per {plan.period}</div>
                         {plan.pricePerMonth && (
                           <div className="text-sm text-primary font-medium mt-1">{plan.pricePerMonth}/month</div>
+                        )}
+                        {/* Add invisible text for first and last plan to match height */}
+                        {(index === 0 || index === 2) && (
+                          <div className="text-sm text-transparent mt-1">$167/month</div>
                         )}
                       </div>
                     </div>
