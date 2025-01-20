@@ -56,7 +56,7 @@ const plans = [
   },
 ];
 
-export const Pricing = () => {
+const PricingPage = () => {
   return (
     <div className="section-padding">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
