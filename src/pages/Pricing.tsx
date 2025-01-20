@@ -16,6 +16,8 @@ const plans = [
     seoContent: "Not included",
     appLimit: "Unlimited",
     whitelabeling: true,
+    dedicatedSupport: false,
+    dedicatedEngineer: false,
   },
   {
     name: "ToolzFlow Six Month",
@@ -31,6 +33,8 @@ const plans = [
     seoContent: "Best practice guide provided",
     appLimit: "Unlimited",
     whitelabeling: true,
+    dedicatedSupport: true,
+    dedicatedEngineer: false,
   },
   {
     name: "ToolzFlow Agency",
@@ -45,6 +49,8 @@ const plans = [
     seoContent: "Written & optimized by our SEO experts",
     appLimit: "Unlimited",
     whitelabeling: true,
+    dedicatedSupport: true,
+    dedicatedEngineer: true,
   },
 ];
 
@@ -220,6 +226,53 @@ const PricingPage = () => {
                   {plans.map((plan) => (
                     <TableCell key={plan.name} className="text-center">
                       {plan.whitelabeling ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+
+                <TableRow>
+                  <TableCell className="font-medium">
+                    Dedicated Slack Support
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        Private Slack channel for direct support access
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Get help within 4 business hours</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.dedicatedSupport ? (
+                        <Check className="h-5 w-5 text-primary mx-auto" />
+                      ) : (
+                        <X className="h-5 w-5 text-destructive mx-auto" />
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">
+                    Dedicated Growth Engineer
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Info className="h-4 w-4 ml-1 inline-block text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        A dedicated engineer to help with your growth strategy
+                      </TooltipContent>
+                    </Tooltip>
+                    <div className="text-sm text-muted-foreground">Accelerate your growth with expert guidance</div>
+                  </TableCell>
+                  {plans.map((plan) => (
+                    <TableCell key={plan.name} className="text-center">
+                      {plan.dedicatedEngineer ? (
                         <Check className="h-5 w-5 text-primary mx-auto" />
                       ) : (
                         <X className="h-5 w-5 text-destructive mx-auto" />
