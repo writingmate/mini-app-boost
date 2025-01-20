@@ -74,13 +74,15 @@ const PricingPage = () => {
                   {plans.map((plan) => (
                     <TableHead key={plan.name} className="text-center">
                       <div className="flex flex-col items-center justify-between min-h-[200px] p-4">
-                        <div className="space-y-2 text-center">
-                          <h3 className="font-bold text-lg text-foreground">{plan.name}</h3>
-                          <div className="text-2xl font-bold text-foreground">{plan.price}</div>
-                          <div className="text-sm text-muted-foreground">per {plan.period}</div>
-                          {plan.pricePerMonth && (
-                            <div className="text-sm text-primary">{plan.pricePerMonth}/month</div>
-                          )}
+                        <div className="space-y-4 text-center">
+                          <h3 className="font-bold text-xl text-foreground tracking-tight">{plan.name}</h3>
+                          <div>
+                            <div className="text-3xl font-bold text-primary">{plan.price}</div>
+                            <div className="text-sm text-muted-foreground mt-1">per {plan.period}</div>
+                            {plan.pricePerMonth && (
+                              <div className="text-sm text-primary font-medium mt-1">{plan.pricePerMonth}/month</div>
+                            )}
+                          </div>
                         </div>
                         <BookingDialog 
                           className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200"
