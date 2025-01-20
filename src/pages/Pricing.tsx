@@ -101,7 +101,7 @@ const PricingPage = () => {
               <TableHead className="w-[250px]">Features</TableHead>
               {plans.map((plan, index) => (
                 <TableHead key={plan.name} className="text-center">
-                  <div className="flex flex-col items-center justify-between min-h-[180px] p-4">
+                  <div className="flex flex-col justify-between h-full min-h-[180px]">
                     <div className="space-y-2 text-center">
                       <h3 className="font-bold text-xl text-foreground tracking-tight">{plan.name}</h3>
                       <div>
@@ -116,12 +116,14 @@ const PricingPage = () => {
                         )}
                       </div>
                     </div>
-                    <BookingDialog 
-                      size="default"
-                      className="px-6 py-2"
-                    >
-                      Book a Call
-                    </BookingDialog>
+                    <div className="mt-4">
+                      <BookingDialog 
+                        size="default"
+                        className="px-6 py-2"
+                      >
+                        Book a Call
+                      </BookingDialog>
+                    </div>
                   </div>
                 </TableHead>
               ))}
