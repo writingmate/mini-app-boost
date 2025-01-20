@@ -137,9 +137,9 @@ const PricingPage = () => {
         <Table className="border rounded-2xl overflow-hidden">
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[250px]">Features</TableHead>
+              <TableHead className="w-[250px] pb-6">Features</TableHead>
               {plans.map((plan, index) => (
-                <TableHead key={plan.name} className="text-center">
+                <TableHead key={plan.name} className="text-center pb-6">
                   <div className="flex flex-col justify-between h-full min-h-[180px]">
                     <div className="space-y-2 text-center">
                       <h3 className="font-bold text-xl text-foreground tracking-tight">{plan.name}</h3>
