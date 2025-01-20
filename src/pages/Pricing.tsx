@@ -65,7 +65,7 @@ const PricingPage = () => {
                         <div className="text-sm text-primary">{plan.pricePerMonth}/month</div>
                       )}
                       <BookingDialog 
-                        className="mt-4 w-full bg-primary text-primary-foreground hover:shadow-lg transition-shadow"
+                        className="mt-4 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
                       >
                         Get Started
                       </BookingDialog>
