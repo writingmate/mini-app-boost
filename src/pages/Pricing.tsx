@@ -133,7 +133,7 @@ const PricingPage = () => {
         <span className="block text-sm mt-1">1 slot already booked</span>
       </p>
       
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto mb-16">
         <Table className="border rounded-2xl overflow-hidden">
           <TableHeader>
             <TableRow>
