@@ -21,7 +21,7 @@ const PricingPage = () => {
       period: "6 months",
       pricePerMonth: "$167",
       appsBuilt: "Up to 3",
-      builder: "First 3 apps built by our team in month one, then you",
+      builder: "First 3 apps built by our team in the first 30 days or until 3 apps are completed (whichever comes first), then you build the rest",
       hosting: true,
       keywordAnalysis: true,
       optimization: false,
@@ -32,7 +32,7 @@ const PricingPage = () => {
       price: "$5,000",
       period: "month",
       appsBuilt: "Up to 16",
-      builder: "Up to first 15 apps in the first month, then you",
+      builder: "Up to first 15 apps built by our team in the first 30 days or until 15 apps are completed (whichever comes first), then you build the rest",
       hosting: true,
       keywordAnalysis: true,
       optimization: true,
@@ -114,8 +114,7 @@ const PricingPage = () => {
                 ))}
               </TableRow>
               <TableRow>
-                <TableCell className="font-medium">
-                  App Optimization for Conversion Rates
+                <TableCell className="font-medium">App Optimization for Conversion Rates
                   <div className="text-sm text-muted-foreground">Drives 10-30% more traffic</div>
                 </TableCell>
                 {plans.map((plan) => (
