@@ -98,10 +98,6 @@ const PricingPage = () => {
             <TableRow>
               <TableCell className="font-medium">
                 Apps Limit
-                <div className="flex items-center gap-2">
-                  <span>Unlimited</span>
-                  <Check className="h-4 w-4 text-primary" />
-                </div>
                 <div className="text-sm text-muted-foreground">Create as many apps as you need</div>
               </TableCell>
               {plans.map((plan) => (
