@@ -1,9 +1,8 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Database, Server, RocketIcon, ChartBar, Users, User } from "lucide-react";
+import { Check, X, Database, Server, RocketIcon, ChartBar, Users, User } from "lucide-react";
+import { BookingDialog } from "@/components/BookingDialog";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
-import { PricingHeader } from "@/components/pricing/PricingHeader";
-import { PricingFeature } from "@/components/pricing/PricingFeature";
 
 const plans = [
   {
@@ -30,7 +29,7 @@ const plans = [
     builder: "We build up to 3 apps",
     hosting: true,
     keywordAnalysis: true,
-    optimization: "Up to 3 optimizations for each app",
+    optimization: false,
     seoContent: "Best practice guide provided",
     appLimit: "Unlimited",
     whitelabeling: true,
@@ -55,6 +54,75 @@ const plans = [
 ];
 
 const PricingPage = () => {
+  const renderFeatureValue = (value: any) => {
+    if (typeof value === 'boolean') {
+      return value ? (
+        <Check className="h-5 w-5 text-primary mx-auto" />
+      ) : (
+        <X className="h-5 w-5 text-destructive mx-auto" />
+      );
+    }
+    
+    if (value === "Not included") {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <X className="h-4 w-4 text-destructive" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    // Handle app building services text
+    if (typeof value === 'string' && value.toLowerCase().includes('you build')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <X className="h-4 w-4 text-destructive" />
+          <span>You build the apps</span>
+        </div>
+      );
+    }
+
+    if (typeof value === 'string' && value.toLowerCase().includes('we build')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    // Handle optimization text
+    if (typeof value === 'string' && value.toLowerCase().includes('up to 3 optimizations')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>Up to 3 optimizations for each app</span>
+        </div>
+      );
+    }
+
+    // Handle SEO content text
+    if (typeof value === 'string' && value.toLowerCase().includes('written & optimized')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    if (typeof value === 'string' && value.toLowerCase().includes('best practice')) {
+      return (
+        <div className="flex items-center justify-center gap-2">
+          <Check className="h-4 w-4 text-primary" />
+          <span>{value}</span>
+        </div>
+      );
+    }
+
+    return value;
+  };
+
   return (
     <div className="section-padding">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
@@ -70,9 +138,32 @@ const PricingPage = () => {
           <TableHeader>
             <TableRow>
               <TableHead className="w-[250px]">Features</TableHead>
-              {plans.map((plan) => (
+              {plans.map((plan, index) => (
                 <TableHead key={plan.name} className="text-center">
-                  <PricingHeader {...plan} />
+                  <div className="flex flex-col justify-between h-full min-h-[180px]">
+                    <div className="space-y-2 text-center">
+                      <h3 className="font-bold text-xl text-foreground tracking-tight">{plan.name}</h3>
+                      <div>
+                        <div className="text-3xl font-bold text-primary">{plan.price}</div>
+                        <div className="text-sm text-muted-foreground mt-1">per {plan.period}</div>
+                        {plan.pricePerMonth && (
+                          <div className="text-sm text-primary font-medium mt-1">{plan.pricePerMonth}/month</div>
+                        )}
+                        {/* Add invisible text for first and last plan to match height */}
+                        {(index === 0 || index === 2) && (
+                          <div className="text-sm text-transparent mt-1">$167/month</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="mt-4">
+                      <BookingDialog 
+                        size="default"
+                        className="px-6 py-2"
+                      >
+                        Book a Call
+                      </BookingDialog>
+                    </div>
+                  </div>
                 </TableHead>
               ))}
             </TableRow>
@@ -81,79 +172,103 @@ const PricingPage = () => {
           <TableBody>
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={Database}
-                  title="Apps Limit"
-                  description="Create as many apps as you need"
-                  value="Unlimited"
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Database className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Apps Limit</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">Create as many apps as you need</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.appLimit}
+                  <div className="flex items-center justify-center gap-2">
+                    <span>{plan.appLimit}</span>
+                    <Check className="h-4 w-4 text-primary" />
+                  </div>
                 </TableCell>
               ))}
             </TableRow>
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={Users}
-                  title="White Labeling"
-                  description="Remove our branding from your apps and brand them as your own"
-                  value={true}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Users className="h-5 w-5 text-primary" />
+                    <span className="font-medium">White Labeling</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">Remove our branding from your apps and brand them as your own</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.whitelabeling}
+                  {plan.whitelabeling ? (
+                    <Check className="h-5 w-5 text-primary mx-auto" />
+                  ) : (
+                    <X className="h-5 w-5 text-destructive mx-auto" />
+                  )}
                 </TableCell>
               ))}
             </TableRow>
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={Server}
-                  title="App Hosting"
-                  description="Save $50-200 per month on hosting costs"
-                  value={true}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <Server className="h-5 w-5 text-primary" />
+                    <span className="font-medium">App Hosting</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">Save $50-200 per month on hosting costs</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.hosting}
+                  {plan.hosting ? (
+                    <Check className="h-5 w-5 text-primary mx-auto" />
+                  ) : (
+                    <X className="h-5 w-5 text-destructive mx-auto" />
+                  )}
                 </TableCell>
               ))}
             </TableRow>
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={ChartBar}
-                  title="Keyword Analysis & Competitive Research"
-                  description="It's hard to come up with good app ideas. We help you with in-depth SEO keyword analysis and competitive research"
-                  value={true}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Keyword Analysis & Competitive Research</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
+                    It's hard to come up with good app ideas. We help you with in-depth SEO keyword analysis and competitive research
+                  </div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.keywordAnalysis}
+                  {plan.keywordAnalysis ? (
+                    <Check className="h-5 w-5 text-primary mx-auto" />
+                  ) : (
+                    <X className="h-5 w-5 text-destructive mx-auto" />
+                  )}
                 </TableCell>
               ))}
             </TableRow>
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={RocketIcon}
-                  title="App Building Services"
-                  description="Need help building apps, we are here to help"
-                  value={plans[0].builder}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <RocketIcon className="h-5 w-5 text-primary" />
+                    <span className="font-medium">App Building Services</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
+                    Need help building apps, we are here to help
+                  </div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
-                <TableCell key={plan.name} className="text-center">
+                <TableCell key={plan.name} className="text-center text-sm">
                   {plan.builder}
                 </TableCell>
               ))}
@@ -161,48 +276,67 @@ const PricingPage = () => {
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={ChartBar}
-                  title="SEO Content"
-                  description="Apps need high quality content to rank high on search engines"
-                  value={plans[2].seoContent}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    <span className="font-medium">SEO Content</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
+                    Apps need high quality content to rank high on search engines, we help you write it
+                  </div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
-                <TableCell key={plan.name} className="text-center">
-                  {plan.seoContent}
+                <TableCell key={plan.name} className="text-center text-sm">
+                  {renderFeatureValue(plan.seoContent)}
                 </TableCell>
               ))}
             </TableRow>
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={ChartBar}
-                  title="App Optimization for Conversion Rates"
-                  description="Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates"
-                  value={plans[2].optimization}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    <span className="font-medium">App Optimization for Conversion Rates</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">
+                    Building an app is just a first step, you'll need to monitor metrics and optimize it to improve conversion rates
+                  </div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.optimization}
+                  {typeof plan.optimization === 'boolean' ? (
+                    plan.optimization ? (
+                      <Check className="h-5 w-5 text-primary mx-auto" />
+                    ) : (
+                      <X className="h-5 w-5 text-destructive mx-auto" />
+                    )
+                  ) : (
+                    plan.optimization
+                  )}
                 </TableCell>
               ))}
             </TableRow>
 
             <TableRow>
               <TableCell className="font-medium">
-                <PricingFeature
-                  icon={User}
-                  title="Dedicated Growth Engineer"
-                  description="A dedicated engineer to help with your growth strategy"
-                  value={true}
-                />
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <User className="h-5 w-5 text-primary" />
+                    <span className="font-medium">Dedicated Growth Engineer</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground pl-7">A dedicated engineer to help with your growth strategy</div>
+                </div>
               </TableCell>
               {plans.map((plan) => (
                 <TableCell key={plan.name} className="text-center">
-                  {plan.dedicatedEngineer}
+                  {plan.dedicatedEngineer ? (
+                    <Check className="h-5 w-5 text-primary mx-auto" />
+                  ) : (
+                    <X className="h-5 w-5 text-destructive mx-auto" />
+                  )}
                 </TableCell>
               ))}
             </TableRow>
