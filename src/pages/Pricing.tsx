@@ -2,6 +2,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Check, X, Info } from "lucide-react";
 import { BookingDialog } from "@/components/BookingDialog";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { CallToAction } from "@/components/CallToAction";
+import { Footer } from "@/components/Footer";
 
 const plans = [
   {
@@ -62,7 +64,8 @@ const PricingPage = () => {
           Choose Your <span className="gradient-text">Plan</span>
         </h1>
         <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-          Compare our plans and choose the one that best fits your needs
+          Only <span className="text-primary font-semibold">2 slots left</span> January 2025 out of 3 total client positions.
+          <span className="block text-sm mt-1">1 slot already booked</span>
         </p>
 
         <div className="overflow-x-auto">
@@ -85,9 +88,10 @@ const PricingPage = () => {
                           </div>
                         </div>
                         <BookingDialog 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200"
+                          size="lg" 
+                          className="w-full text-xl px-12 py-8 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:shadow-xl"
                         >
-                          Get Started
+                          Book a Call
                         </BookingDialog>
                       </div>
                     </TableHead>
@@ -287,6 +291,8 @@ const PricingPage = () => {
           </TooltipProvider>
         </div>
       </div>
+      <CallToAction />
+      <Footer />
     </div>
   );
 };
